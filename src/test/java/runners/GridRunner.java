@@ -1,6 +1,5 @@
 package runners;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -12,15 +11,14 @@ import org.junit.runner.RunWith;
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failedRerun.txt",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                "rerun:target/failedRerun.txt"
         },
-        monochrome=true,
+        monochrome=false,
         features = "./src/test/resources/features",
-        glue = {"stepdefinitions", "hooks"},
+        glue = {"stepdefinitions"},
         dryRun = false,
-        tags = "@failed_tests"
+        tags = "@grid_feature"
 )
-public class Runner {
+public class GridRunner {
 
 }
