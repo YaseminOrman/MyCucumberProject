@@ -13,13 +13,12 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
-        monochrome=true,
+        monochrome=false,
         features = "./src/test/resources/features",
-        glue = {"stepdefinitions", "hooks"},
+        glue = {"stepdefinitions"},
         dryRun = false,
-        tags = "@failed_tests"
+        tags = "@scenario_outline"
 )
 public class Runner {
 
